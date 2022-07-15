@@ -1,16 +1,14 @@
-import "../styles/Home.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css/skyblue";
 import { useEffect, useState } from "react";
+import "@splidejs/react-splide/css/skyblue";
 
 const Home = () => {
   const [data, setData] = useState(null);
   const fetchApi = async () => {
     const res = await fetch(
-      `https://api.spoonacular.com/recipes/random?apiKey=232dc9c342b64e138da1e3fce842cf84&number=10`
+      `https://api.spoonacular.com/recipes/random?apiKey=232dc9c342b64e138da1e3fce842cf84&number=21`
     );
     const data = await res.json();
-    console.log(data.recipes);
     setData(data.recipes);
   };
   useEffect(() => {
@@ -23,9 +21,9 @@ const Home = () => {
         <Splide
           options={{
             perPage: 4,
-            gap: '1rem',
-            pagination:false,
-            drag:true,
+            gap: "1rem",
+            pagination: false,
+            drag: true,
             arrows: false,
           }}
         >

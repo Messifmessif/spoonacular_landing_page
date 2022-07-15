@@ -1,7 +1,6 @@
 import { SiCodechef } from "react-icons/si";
 import { FaPizzaSlice } from "react-icons/fa";
 import { FaHamburger } from "react-icons/fa";
-import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (
