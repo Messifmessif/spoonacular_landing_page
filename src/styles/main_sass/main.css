@@ -5,58 +5,6 @@
   box-sizing: border-box;
 }
 
-.Nav_wrapper {
-  font-family: sans-serif;
-  width: 60%;
-  margin: 0 auto;
-}
-.Nav_wrapper .logo {
-  font-size: 32px;
-}
-.Nav_wrapper .title {
-  font-family: sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-}
-.Nav_wrapper .search_section {
-  width: 100%;
-  text-align: center;
-}
-.Nav_wrapper .search_section .search {
-  width: 50%;
-  margin: 10px auto;
-  padding: 15px 20px;
-  border-radius: 20px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 22px;
-}
-.Nav_wrapper .search_section .search:focus {
-  outline: none;
-}
-.Nav_wrapper .icons {
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-  margin: 0 auto;
-  padding-top: 20px;
-}
-.Nav_wrapper .icons .main_icon_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
-  border-radius: 50%;
-  padding: 15px;
-  transition: all 0.6s ease;
-  background-image: linear-gradient(to right, #ffecd2, #fdb8a1);
-}
-.Nav_wrapper .icons .main_icon_container:hover {
-  background-image: linear-gradient(to right, #a38ed2, #f9c1eb);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -72,16 +20,6 @@
   width: 100%;
   margin: auto;
 }
-.home .wrapper .slider_title {
-  margin-top: 40px;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  font-size: 32px;
-}
-.home h1 {
-  margin-bottom: 20px;
-  text-transform: capitalize;
-}
 
 .banner {
   background-image: url("http://demo.tutsflow.com/foodera/images/bg/3.jpg");
@@ -89,7 +27,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  padding: 0px 15px;
+  padding: 6rem 15px;
 }
 .banner .banner_title {
   font-size: 48px;
@@ -98,12 +36,23 @@
   font-weight: 700;
   margin: 25px 0px;
 }
+@media (min-width: 720px) {
+  .banner .banner_title {
+    max-width: 60%;
+  }
+}
 .banner .banner_p {
   color: #555555;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.5px;
   padding-bottom: 20px;
+  line-height: 38px;
+}
+@media (min-width: 720px) {
+  .banner .banner_p {
+    max-width: 60%;
+  }
 }
 .banner .banner-btn {
   background: #a82d49;
@@ -113,9 +62,11 @@
   text-transform: capitalize;
   padding: 11px 28px;
   font-family: "Quicksand", sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
   border-radius: 20px;
   border: none;
+  cursor: pointer;
 }
 
 .stats {
@@ -123,12 +74,28 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 46px;
+  padding: 40px auto;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+@media (min-width: 720px) {
+  .stats {
+    padding-bottom: 0;
+  }
 }
 .stats .stats-container {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  height: 60%;
+  width: 60%;
+}
+@media (min-width: 720px) {
+  .stats .stats-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 .stats .stats-container .stat-element {
   color: #fff;
@@ -145,24 +112,65 @@
 }
 .stats .stats-container .stat-element p {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 16px;
+  color: rgb(168, 148, 148);
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.slide-element {
-  border-radius: 1rem;
-  overflow: hidden;
-  height: 15rem;
-  cursor: pointer;
+.sample_show {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 90%;
+  margin: 100px auto;
 }
-.slide-element p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  font-size: 20px;
-  font-weight: 600;
+@media (min-width: 720px) {
+  .sample_show {
+    flex-direction: row;
+  }
+}
+@media (min-width: 960px) {
+  .sample_show {
+    align-items: center;
+  }
+  .sample_show .image-show {
+    max-width: 650px;
+  }
+}
+.sample_show .text {
+  margin-left: 20px;
+}
+.sample_show .header {
+  font-size: 36px;
+  color: #43121d;
+  font-size: 32px;
+  font-family: "Quicksand", sans-serif;
+  line-height: 45px;
+  font-weight: 700;
+}
+.sample_show p {
+  font-size: 16px;
+  color: #555;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  margin: 20px 0;
+}
+.sample_show button {
+  background: #a82d49;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 15px 28px;
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 img {
@@ -174,27 +182,75 @@ img {
   position: relative;
 }
 
-.container-grid {
+.slogan_outer {
+  background-image: url("http://demo.tutsflow.com/foodera/images/parallax/1.jpg");
   width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+}
+@media (min-width: 720px) {
+  .slogan_outer .banner_two {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+.slogan_outer .banner_two_title {
+  color: #a82d49;
+  font-family: "Quicksand", sans-serif;
+  padding-top: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 36px;
+  text-align: center;
+}
+.slogan_outer .banner_two_p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #555;
+}
+
+.grid_title {
   margin: 20px auto;
-  border: 1px solid black;
+  width: 90%;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 36px;
+  color: #43121d;
+}
+
+.grid_paragraph {
+  color: #555;
+  line-height: 28px;
+  font-weight: 400;
+  width: 90%;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.container-grid {
+  width: 90%;
+  margin: 50px auto;
   height: 600px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 12px;
+  grid-template-columns: 1fr;
+  grid-gap: 24px;
 }
-.container-grid .grid-item {
-  outline: 1px solid red;
+@media (min-width: 720px) {
+  .container-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .container-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .container-grid .grid-item .image-container {
   width: 100%;
-  height: 80%;
-  outline: 1px solid purple;
-  background-color: #777;
-}
-.container-grid .grid-item .text-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 20%;
+  height: 100%;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

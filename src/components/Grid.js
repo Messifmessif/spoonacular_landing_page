@@ -1,50 +1,37 @@
-const Grid = () => {
+
+
+const Grid = ({ data }) => {
+
+
+  const glutenFree =
+    data &&
+    data.filter((ele) => {
+      if (ele.glutenFree) {
+        return ele.glutenFree === true;
+      } else {
+        return "";
+      }
+    });
+  // console.log(glutenFree);
   return (
     <>
-      {/* <h2>Random</h2> */}
-      <div className="container-grid">
-        <div className="grid-item">
-          <div className="image-container"></div>
-          <div className="text-content">
-            <button>ingredients</button>
-            <p>icon</p>
-          </div>
-        </div>
-        <div className="grid-item">
-          <div className="image-container"></div>
-          <div className="text-content">
-            <button>ingredients</button>
-            <p>icon</p>
-          </div>
-        </div>
-        <div className="grid-item">
-          <div className="image-container"></div>
-          <div className="text-content">
-            <button>ingredients</button>
-            <p>icon</p>
-          </div>
-        </div>
-        <div className="grid-item">
-          <div className="image-container"></div>
-          <div className="text-content">
-            <button>ingredients</button>
-            <p>icon</p>
-          </div>
-        </div>
-        <div className="grid-item">
-          <div className="image-container"></div>
-          <div className="text-content">
-            <button>ingredients</button>
-            <p>icon</p>
-          </div>
-        </div>
-        <div className="grid-item">
-          <div className="image-container"></div>
-          <div className="text-content">
-            <button>ingredients</button>
-            <p>icon</p>
-          </div>
-        </div>
+      <h2 className="grid_title">Discover our Healthy Food</h2>
+      <p className="grid_paragraph">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br /> Cupiditate
+        tenetur similique explicabo tempore debitis quos animi deleniti,
+        aspernatur 
+      </p>
+      <div
+        className="container-grid"
+      >
+        {glutenFree &&
+          glutenFree.map((ele) => (
+            <div className="grid-item" key={ele.id}>
+              <div className="image-container">
+                <img src={ele.image} alt="food_img" />
+              </div>
+            </div>
+          ))}
       </div>
     </>
   );
