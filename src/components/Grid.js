@@ -17,7 +17,7 @@ const Grid = ({ data }) => {
     <>
       <h2 className="grid_title">Discover our Healthy Food</h2>
       <p className="grid_paragraph">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br /> Cupiditate
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.Cupiditate
         tenetur similique explicabo tempore debitis quos animi deleniti,
         aspernatur 
       </p>

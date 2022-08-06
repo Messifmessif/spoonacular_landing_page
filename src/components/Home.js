@@ -8,7 +8,7 @@ const Home = () => {
   const { ref, inView } = useInView({
     threshold: 0.4,
   });
- 
+
   const fetchApi = async () => {
     const localData = localStorage.getItem("popular");
     if (localData) {
@@ -107,16 +107,13 @@ const Home = () => {
             or poor
           </h3>
           <p className="banner_two_p">
-            Lorem ipsum, dolor sit amet elit. <br />
-            Lorem ipsum, dolor sit consectetur adipisicing elit. Blanditiis!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-            laborum.
+            Lorem ipsum, dolor sit amet elit. Lorem ipsum, dolor sit consectetur
+            adipisicing elit. Blanditiis! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Commodi, laborum.
           </p>
         </div>
       </div>
-      <Grid
-        data={data}
-      />
+      <Grid data={data} />
     </div>
   );
 };

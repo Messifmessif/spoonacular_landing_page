@@ -95,6 +95,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    width: 80%;
   }
 }
 .stats .stats-container .stat-element {
@@ -107,7 +108,7 @@
   margin-bottom: 33px;
 }
 .stats .stats-container .stat-element .number {
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 .stats .stats-container .stat-element p {
@@ -225,7 +226,8 @@ img {
   color: #555;
   line-height: 28px;
   font-weight: 400;
-  width: 90%;
+  width: 60%;
+  margin: 10px auto;
   font-family: "Quicksand", sans-serif;
   letter-spacing: 0.5px;
   text-align: center;
