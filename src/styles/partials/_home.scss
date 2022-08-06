@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  // overflow-y: hidden;
 }
 
 .home {
@@ -45,18 +44,7 @@
     }
   }
   .banner-btn {
-    background: #a82d49;
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: capitalize;
-    padding: 11px 28px;
-    font-family: $theme_font;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
+   @include button;
   }
 }
 // stats container
@@ -137,18 +125,8 @@
     margin: 20px 0;
   }
   button{
-    background: #a82d49;
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: capitalize;
-    padding: 15px 28px;
-    font-family: $theme_font;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+    
+    @include button;
   }
 }
 img {

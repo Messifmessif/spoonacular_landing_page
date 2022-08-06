@@ -19,7 +19,7 @@ const Home = () => {
       );
       const data = await res.json();
       localStorage.setItem("popular", JSON.stringify(data.recipes));
-      console.log(data.recipes);
+      
     }
   };
   useEffect(() => {

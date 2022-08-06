@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hurricane&family=Inspiration&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&family=Quicksand:wght@700&display=swap");
-.App {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -165,11 +159,11 @@
   font-weight: bold;
   font-size: 16px;
   text-transform: capitalize;
-  padding: 15px 28px;
+  padding: 11px 28px;
   font-family: "Quicksand", sans-serif;
   margin-bottom: 30px;
-  margin-top: 10px;
-  border-radius: 5px;
+  margin-top: 30px;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
 }
